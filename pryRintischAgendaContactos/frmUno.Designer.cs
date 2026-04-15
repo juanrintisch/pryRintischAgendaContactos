@@ -81,7 +81,7 @@
             this.mskNumero.Location = new System.Drawing.Point(165, 91);
             this.mskNumero.Mask = "(351)000-0000";
             this.mskNumero.Name = "mskNumero";
-            this.mskNumero.Size = new System.Drawing.Size(80, 20);
+            this.mskNumero.Size = new System.Drawing.Size(75, 20);
             this.mskNumero.TabIndex = 2;
             // 
             // cmbCategoria
@@ -94,7 +94,7 @@
             "Trabajo"});
             this.cmbCategoria.Location = new System.Drawing.Point(165, 169);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(75, 21);
             this.cmbCategoria.TabIndex = 4;
             // 
             // txtCorreo
@@ -108,7 +108,7 @@
             // 
             this.txtApellido.Location = new System.Drawing.Point(165, 52);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.Size = new System.Drawing.Size(139, 20);
             this.txtApellido.TabIndex = 1;
             // 
             // txtNombre
@@ -184,6 +184,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.LightCoral;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(247, 19);
             this.btnEliminar.Name = "btnEliminar";
@@ -196,6 +197,7 @@
             // brnEditar
             // 
             this.brnEditar.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.brnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.brnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnEditar.Location = new System.Drawing.Point(130, 19);
             this.brnEditar.Name = "brnEditar";
@@ -208,8 +210,9 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(9, 19);
+            this.btnAgregar.Location = new System.Drawing.Point(6, 19);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(81, 35);
             this.btnAgregar.TabIndex = 0;
@@ -229,6 +232,7 @@
             // 
             // dtaDatos
             // 
+            this.dtaDatos.AllowUserToAddRows = false;
             this.dtaDatos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dtaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtaDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -237,6 +241,7 @@
             this.NumeroTelefono,
             this.CorreoElectronico,
             this.Categoria});
+            this.dtaDatos.Enabled = false;
             this.dtaDatos.Location = new System.Drawing.Point(6, 13);
             this.dtaDatos.Name = "dtaDatos";
             this.dtaDatos.Size = new System.Drawing.Size(548, 254);

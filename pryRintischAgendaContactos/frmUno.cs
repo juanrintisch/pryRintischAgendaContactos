@@ -86,12 +86,21 @@ namespace pryRintischAgendaContactos
 
         private void brnEditar_Click(object sender, EventArgs e)
         {
-            dtaDatos.CurrentRow.Cells[0].Value = txtNombre.Text;
-            dtaDatos.CurrentRow.Cells[1].Value = txtApellido.Text;
-            dtaDatos.CurrentRow.Cells[2].Value = mskNumero.Text;
-            dtaDatos.CurrentRow.Cells[3].Value = txtCorreo.Text;
-            dtaDatos.CurrentRow.Cells[4].Value = cmbCategoria.Text;
-            MessageBox.Show("Contacto editado correctamente");
+           if (txtNombre.Text != "" && txtApellido.Text != "" && mskNumero.Text != "(351)   -" && txtCorreo.Text != "" && cmbCategoria.Text != "")
+           {
+                dtaDatos.CurrentRow.Cells[0].Value = txtNombre.Text;
+                dtaDatos.CurrentRow.Cells[1].Value = txtApellido.Text;
+                dtaDatos.CurrentRow.Cells[2].Value = mskNumero.Text;
+                dtaDatos.CurrentRow.Cells[3].Value = txtCorreo.Text;
+                dtaDatos.CurrentRow.Cells[4].Value = cmbCategoria.Text;
+                MessageBox.Show("Contacto editado correctamente");
+                txtNombre.Clear();
+                txtApellido.Clear();
+                mskNumero.Clear();
+                txtCorreo.Clear();
+                cmbCategoria.SelectedIndex = -1;
+                txtNombre.Focus();
+            }           
         }
 
         private void dtaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
