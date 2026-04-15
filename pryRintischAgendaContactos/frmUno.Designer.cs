@@ -187,12 +187,13 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.LightCoral;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(234, 19);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 35);
-            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -200,6 +201,7 @@
             // brnEditar
             // 
             this.brnEditar.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.brnEditar.Enabled = false;
             this.brnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.brnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnEditar.Location = new System.Drawing.Point(122, 19);

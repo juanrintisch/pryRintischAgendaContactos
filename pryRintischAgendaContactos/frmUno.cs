@@ -68,7 +68,9 @@ namespace pryRintischAgendaContactos
                 cmbCategoria.SelectedIndex = -1;
                 txtNombre.Focus();
                 MessageBox.Show("Contacto agregado correctamente");
-            }           
+            }    
+            brnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
                               
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -85,10 +87,10 @@ namespace pryRintischAgendaContactos
         private void brnEditar_Click(object sender, EventArgs e)
         {
             txtNombre.Text = dtaDatos.CurrentRow.Cells[0].Value.ToString();
-            txtApellido.Text=dtaDatos.CurrentRow.Cells[1].Value.ToString();
-            mskNumero.Text=dtaDatos.CurrentRow.Cells[2].Value.ToString();
-            txtCorreo.Text=dtaDatos.CurrentRow.Cells[3].Value.ToString();
-            cmbCategoria.Text=dtaDatos.CurrentRow.Cells[4].Value.ToString();
+            txtApellido.Text = dtaDatos.CurrentRow.Cells[1].Value.ToString();
+            mskNumero.Text = dtaDatos.CurrentRow.Cells[2].Value.ToString();
+            txtCorreo.Text = dtaDatos.CurrentRow.Cells[3].Value.ToString();
+            cmbCategoria.Text = dtaDatos.CurrentRow.Cells[4].Value.ToString();
             btnConfirmarEdicion.Enabled = true;
         }
 
