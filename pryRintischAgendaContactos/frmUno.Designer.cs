@@ -51,6 +51,7 @@
             this.NumeroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CorreoElectronico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConfirmarEdicion = new System.Windows.Forms.Button();
             this.grpDatos.SuspendLayout();
             this.grpBotones.SuspendLayout();
             this.grpTabla.SuspendLayout();
@@ -172,23 +173,25 @@
             // grpBotones
             // 
             this.grpBotones.BackColor = System.Drawing.Color.SteelBlue;
+            this.grpBotones.Controls.Add(this.btnConfirmarEdicion);
             this.grpBotones.Controls.Add(this.btnEliminar);
             this.grpBotones.Controls.Add(this.brnEditar);
             this.grpBotones.Controls.Add(this.btnAgregar);
             this.grpBotones.Location = new System.Drawing.Point(12, 216);
             this.grpBotones.Name = "grpBotones";
-            this.grpBotones.Size = new System.Drawing.Size(328, 69);
+            this.grpBotones.Size = new System.Drawing.Size(328, 108);
             this.grpBotones.TabIndex = 1;
             this.grpBotones.TabStop = false;
+            this.grpBotones.Enter += new System.EventHandler(this.grpBotones_Enter);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.LightCoral;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(247, 19);
+            this.btnEliminar.Location = new System.Drawing.Point(234, 19);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(88, 35);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -199,9 +202,9 @@
             this.brnEditar.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.brnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.brnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnEditar.Location = new System.Drawing.Point(130, 19);
+            this.brnEditar.Location = new System.Drawing.Point(122, 19);
             this.brnEditar.Name = "brnEditar";
-            this.brnEditar.Size = new System.Drawing.Size(75, 35);
+            this.brnEditar.Size = new System.Drawing.Size(88, 35);
             this.brnEditar.TabIndex = 1;
             this.brnEditar.Text = "EDITAR";
             this.brnEditar.UseVisualStyleBackColor = false;
@@ -214,7 +217,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(6, 19);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(81, 35);
+            this.btnAgregar.Size = new System.Drawing.Size(88, 35);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -241,9 +244,10 @@
             this.NumeroTelefono,
             this.CorreoElectronico,
             this.Categoria});
-            this.dtaDatos.Enabled = false;
+            this.dtaDatos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtaDatos.Location = new System.Drawing.Point(6, 13);
             this.dtaDatos.Name = "dtaDatos";
+            this.dtaDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtaDatos.Size = new System.Drawing.Size(548, 254);
             this.dtaDatos.TabIndex = 0;
             this.dtaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtaDatos_CellContentClick);
@@ -273,12 +277,25 @@
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
             // 
+            // btnConfirmarEdicion
+            // 
+            this.btnConfirmarEdicion.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnConfirmarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirmarEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarEdicion.Location = new System.Drawing.Point(122, 60);
+            this.btnConfirmarEdicion.Name = "btnConfirmarEdicion";
+            this.btnConfirmarEdicion.Size = new System.Drawing.Size(88, 35);
+            this.btnConfirmarEdicion.TabIndex = 2;
+            this.btnConfirmarEdicion.Text = "CONFIRMAR EDICION";
+            this.btnConfirmarEdicion.UseVisualStyleBackColor = false;
+            this.btnConfirmarEdicion.Click += new System.EventHandler(this.btnConfirmarEdicion_Click);
+            // 
             // frmUno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(922, 302);
+            this.ClientSize = new System.Drawing.Size(922, 416);
             this.Controls.Add(this.grpBotones);
             this.Controls.Add(this.grpTabla);
             this.Controls.Add(this.grpDatos);
@@ -319,6 +336,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn CorreoElectronico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.Button btnConfirmarEdicion;
     }
 }
 

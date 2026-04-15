@@ -68,9 +68,7 @@ namespace pryRintischAgendaContactos
                 cmbCategoria.SelectedIndex = -1;
                 txtNombre.Focus();
                 MessageBox.Show("Contacto agregado correctamente");
-            }
-            
-
+            }           
         }
                               
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -86,8 +84,27 @@ namespace pryRintischAgendaContactos
 
         private void brnEditar_Click(object sender, EventArgs e)
         {
-           if (txtNombre.Text != "" && txtApellido.Text != "" && mskNumero.Text != "(351)   -" && txtCorreo.Text != "" && cmbCategoria.Text != "")
-           {
+            txtNombre.Text = dtaDatos.CurrentRow.Cells[0].Value.ToString();
+            txtApellido.Text=dtaDatos.CurrentRow.Cells[1].Value.ToString();
+            mskNumero.Text=dtaDatos.CurrentRow.Cells[2].Value.ToString();
+            txtCorreo.Text=dtaDatos.CurrentRow.Cells[3].Value.ToString();
+            cmbCategoria.Text=dtaDatos.CurrentRow.Cells[4].Value.ToString();            
+        }
+
+        private void dtaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void grpBotones_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarEdicion_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "" && txtApellido.Text != "" && mskNumero.Text != "(351)   -" && txtCorreo.Text != "" && cmbCategoria.Text != "")
+            {
                 dtaDatos.CurrentRow.Cells[0].Value = txtNombre.Text;
                 dtaDatos.CurrentRow.Cells[1].Value = txtApellido.Text;
                 dtaDatos.CurrentRow.Cells[2].Value = mskNumero.Text;
@@ -100,12 +117,7 @@ namespace pryRintischAgendaContactos
                 txtCorreo.Clear();
                 cmbCategoria.SelectedIndex = -1;
                 txtNombre.Focus();
-            }           
-        }
-
-        private void dtaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+            }
         }
     }
 }
