@@ -88,7 +88,8 @@ namespace pryRintischAgendaContactos
             txtApellido.Text=dtaDatos.CurrentRow.Cells[1].Value.ToString();
             mskNumero.Text=dtaDatos.CurrentRow.Cells[2].Value.ToString();
             txtCorreo.Text=dtaDatos.CurrentRow.Cells[3].Value.ToString();
-            cmbCategoria.Text=dtaDatos.CurrentRow.Cells[4].Value.ToString();            
+            cmbCategoria.Text=dtaDatos.CurrentRow.Cells[4].Value.ToString();
+            btnConfirmarEdicion.Enabled = true;
         }
 
         private void dtaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -118,6 +119,16 @@ namespace pryRintischAgendaContactos
                 cmbCategoria.SelectedIndex = -1;
                 txtNombre.Focus();
             }
+        }
+
+        private void grpTabla_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmUno_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -229,9 +229,10 @@
             this.grpTabla.Controls.Add(this.dtaDatos);
             this.grpTabla.Location = new System.Drawing.Point(346, 12);
             this.grpTabla.Name = "grpTabla";
-            this.grpTabla.Size = new System.Drawing.Size(564, 273);
+            this.grpTabla.Size = new System.Drawing.Size(564, 312);
             this.grpTabla.TabIndex = 1;
             this.grpTabla.TabStop = false;
+            this.grpTabla.Enter += new System.EventHandler(this.grpTabla_Enter);
             // 
             // dtaDatos
             // 
@@ -248,7 +249,7 @@
             this.dtaDatos.Location = new System.Drawing.Point(6, 13);
             this.dtaDatos.Name = "dtaDatos";
             this.dtaDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtaDatos.Size = new System.Drawing.Size(548, 254);
+            this.dtaDatos.Size = new System.Drawing.Size(548, 286);
             this.dtaDatos.TabIndex = 0;
             this.dtaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtaDatos_CellContentClick);
             // 
@@ -280,6 +281,7 @@
             // btnConfirmarEdicion
             // 
             this.btnConfirmarEdicion.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnConfirmarEdicion.Enabled = false;
             this.btnConfirmarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmarEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarEdicion.Location = new System.Drawing.Point(122, 60);
@@ -295,7 +297,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(922, 416);
+            this.ClientSize = new System.Drawing.Size(922, 345);
             this.Controls.Add(this.grpBotones);
             this.Controls.Add(this.grpTabla);
             this.Controls.Add(this.grpDatos);
@@ -303,6 +305,7 @@
             this.Name = "frmUno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contactos";
+            this.Load += new System.EventHandler(this.frmUno_Load);
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
             this.grpBotones.ResumeLayout(false);
