@@ -78,11 +78,11 @@ namespace pryRintischAgendaContactos
                 cmbCategoria.SelectedIndex = -1;
                 txtNombre.Focus();
                 MessageBox.Show("Contacto Agregado Correctamente", "Contactos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                brnEditar.Enabled = true;
+                btnEliminar.Enabled = true;
             } 
             
-            brnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+            
 
         }
                               
@@ -155,7 +155,9 @@ namespace pryRintischAgendaContactos
                cmbCategoria.SelectedIndex = -1;
                txtNombre.Focus();
 
-           }
+                btnConfirmarEdicion.Enabled = false;
+
+            }
             else
             {
                
